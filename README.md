@@ -113,7 +113,7 @@ The goal of this project is to implement a Snowflake schema for our sales data t
 
 #### Performance Tips
 
-1. Consider indexing Customer_ID, Product_ID, and Shipping_ID in the fact table. 
+1. Consider indexing Customer_ID, Product_ID, and Shipping_ID in the fact table. (Only required if dataset is large, eg. 1M+ Records)
 2. Partition the fact table by date or Order_ID for better performance.
 3. Create trigger functions to have an alert system on any data inconsistency or issues encountered.
 
