@@ -38,13 +38,13 @@ The key objectives of this project are:
 ## Understanding flow of Work
 
 1. Extract, & Transformation of Data in Python
-2. Performing Exploratory Data Analysis in Python
-   a. Check Data Integrity, Correctness & Completeness
-   b. Checked Duplicate Data to remove redundancy
-   c. Check for Outliers - Box Plot Method and Skewness checked
-3. Data Modelling - Snowflake Schema
-4. Export Final Tables for Visualisation
-5. Dashboard Created for Tracking Metrics using Tableau
+2. Performing Exploratory Data Analysis in Python <br />
+   a. Check Data Integrity, Correctness & Completeness<br />
+   b. Checked Duplicate Data to remove redundancy<br />
+   c. Check for Outliers - Box Plot Method and Skewness checked<br />
+4. Data Modelling - Snowflake Schema
+5. Export Final Tables for Visualisation
+6. Dashboard Created for Tracking Metrics using Tableau
 
 ## Data Exploration and Cleaning
 
