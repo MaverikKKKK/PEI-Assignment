@@ -109,13 +109,14 @@ The goal of this project is to implement a Snowflake schema for our sales data t
 
 **Transform:** Normalize the data and clean up inconsistencies.
 
-**Load:** Load the data into the Snowflake schema, starting with dimension tables.
+**Load:** Load the data into the Snowflake schema, starting with dimension tables moving to Orders Fact Table
 
 #### Performance Tips
 
 1. Consider indexing Customer_ID, Product_ID, and Shipping_ID in the fact table. (Only required if dataset is large, eg. 1M+ Records)
 2. Partition the fact table by date or Order_ID for better performance.
 3. Create trigger functions to have an alert system on any data inconsistency or issues encountered.
+4. Include order id in shipping table or vice versa to connect it directly with Orders Fact Table
 
 
 # Sales Dashboard : https://public.tableau.com/app/profile/raj.vishal/viz/PEIDataAnalystTask-SalesDashboard/SalesDashboard-1
