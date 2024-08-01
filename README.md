@@ -17,13 +17,13 @@ The key objectives of this project are:
 ## Tools Used
 
 1. Jupyter Notebook
-2. PowerBI
+2. Tableau
 3. GitHub
 
 ## Language Used
 
 1. Python
-2. DAX Functions - PowerBI
+2. Tableau Functions
 
 ## Libraries 
 
@@ -107,4 +107,4 @@ The goal of this project is to implement a Snowflake schema for our sales data t
 3. Create trigger functions to have an alert system on any data inconsistency or issues encountered.
 
 
-
+# Sales Dashboard : https://public.tableau.com/app/profile/raj.vishal/viz/PEIDataAnalystTask-SalesDashboard/SalesDashboard-1
