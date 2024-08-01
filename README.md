@@ -39,39 +39,39 @@ The key objectives of this project are:
 
 1. Extract, & Transformation of Data in Python
 2. Performing Exploratory Data Analysis in Python <br />
-   a. Check Data Integrity, Correctness & Completeness<br />
-   b. Checked Duplicate Data to remove redundancy<br />
-   c. Check for Outliers - Box Plot Method and Skewness checked<br />
+      a. Check Data Integrity, Correctness & Completeness<br />
+      b. Checked Duplicate Data to remove redundancy<br />
+      c. Check for Outliers - Box Plot Method and Skewness checked<br />
 4. Data Modelling - Snowflake Schema
 5. Export Final Tables for Visualisation
 6. Dashboard Created for Tracking Metrics using Tableau
 
 ## Data Exploration and Cleaning
 
-**1. Initial Analysis:** We start by exploring the datasets to understand the data structure and content. This includes checking for missing values, duplicates, and any inconsistencies.
-**2. Data Cleaning:** Based on the initial analysis, we clean the data by handling missing values, removing duplicates, and correcting any inconsistencies found in the datasets.
-**3. Outlier Detection:** We identify and address outliers in the dataset, particularly focusing on high-value transactions that could skew the analysis.
+**1. Initial Analysis:** We start by exploring the datasets to understand the data structure and content. This includes checking for missing values, duplicates, and any inconsistencies. <br />
+**2. Data Cleaning:** Based on the initial analysis, we clean the data by handling missing values, removing duplicates, and correcting any inconsistencies found in the datasets.<br />
+**3. Outlier Detection:** We identify and address outliers in the dataset, particularly focusing on high-value transactions that could skew the analysis.<br />
 
 ## Schema Design
 
-**1. Schema Selection:** We choose a Snowflake schema for this project because it allows for normalized data, reducing redundancy and improving query performance.
-**2. Fact Table:** The **Order Fact Table** is designed to capture transactional data, including Order_ID, Customer_ID, Product_ID, and Amount.
-**3. Dimension Tables:**
-   **a. Customer Table:** Stores customer details, linking to the Country Table.
-   **b. Country Table:** Normalizes country information to avoid repetition.
-   **c. Product Table:** Contains product-related details, linked to the Order Fact Table.
-   **d. Shipping Table:** Connected to the Customer Table via Customer_ID, storing shipping status information.
+**1. Schema Selection:** We choose a Snowflake schema for this project because it allows for normalized data, reducing redundancy and improving query performance. <br />
+**2. Fact Table:** The **Order Fact Table** is designed to capture transactional data, including Order_ID, Customer_ID, Product_ID, and Amount. <br />
+**3. Dimension Tables:** <br />
+   **a. Customer Table:** Stores customer details, linking to the Country Table. <br />
+   **b. Country Table:** Normalizes country information to avoid repetition. <br />
+   **c. Product Table:** Contains product-related details, linked to the Order Fact Table. <br />
+   **d. Shipping Table:** Connected to the Customer Table via Customer_ID, storing shipping status information. <br />
 
 
 **Data Integration**
 
-**1. Generating Tables:** After designing the schema, we generate the necessary tables as CSV files. These tables are structured according to the Snowflake schema, ensuring that they are ready for efficient querying.
-**2. Saving Tables:** The final tables (Country_Table.csv, Customer_Table.csv, Product_Table.csv, Order_Fact_Table.csv, and Shipping_Table.csv) are saved in the working directory, prepared for loading into a data warehouse.
+**1. Generating Tables:** After designing the schema, we generate the necessary tables as CSV files. These tables are structured according to the Snowflake schema, ensuring that they are ready for efficient querying. <br />
+**2. Saving Tables:** The final tables (Country_Table.csv, Customer_Table.csv, Product_Table.csv, Order_Fact_Table.csv, and Shipping_Table.csv) are saved in the working directory, prepared for loading into a data warehouse. <br />
 
 
 ## **Findings**
 
-**1. Data Quality:** The initial data exploration revealed no issues with missing values, but some high-value outliers were identified in the order amounts. These outliers were addressed to ensure accurate analysis. Outliers were for two products : {Monitor, Harddisk}; for which on further exploration I found that these two are high valied product, thus being identified as outliers.
+**1. Data Quality:** The initial data exploration revealed no issues with missing values, but some high-value outliers were identified in the order amounts. These outliers were addressed to ensure accurate analysis. Outliers were for two products : {Monitor, Harddisk}; for which on further exploration I found that these two are high valied product, thus being identified as outliers. 
 
 **2. Schema Design:** The Snowflake schema was successfully implemented, with normalized tables ensuring efficient data storage and retrieval. The Shipping Table was effectively connected to the Customer Table via Customer_ID, allowing for comprehensive analysis of shipping data in relation to customer information.
 
@@ -91,17 +91,17 @@ The goal of this project is to implement a Snowflake schema for our sales data t
 
 ## Dimension Tables
 
-**1. Customer Table:** Contains all customer-related details. Each customer is linked to a country in the Country Table.
-**2. Country Table:** Normalizes country information to avoid repetition.
-**3. Product Table:** Stores product information.
-**4. Shipping Table:** Tracks the shipping status of each order, linked to the Customer Table via Customer_ID.
+**1. Customer Table:** Contains all customer-related details. Each customer is linked to a country in the Country Table. <br />
+**2. Country Table:** Normalizes country information to avoid repetition. <br />
+**3. Product Table:** Stores product information. <br />
+**4. Shipping Table:** Tracks the shipping status of each order, linked to the Customer Table via Customer_ID. <br />
 
 ## Relationships
 
-**1. Customer Table ↔ Order Fact Table:** One-to-Many
-**2. Country Table ↔ Customer Table:** One-to-Many
-**3. Product Table ↔ Order Fact Table:** One-to-Many
-**4. Customer Table ↔ Shipping Table:** One-to-Many
+**1. Customer Table ↔ Order Fact Table:** One-to-Many <br />
+**2. Country Table ↔ Customer Table:** One-to-Many <br />
+**3. Product Table ↔ Order Fact Table:** One-to-Many <br />
+**4. Customer Table ↔ Shipping Table:** One-to-Many <br />
 
 ### ETL Process
 
@@ -113,7 +113,7 @@ The goal of this project is to implement a Snowflake schema for our sales data t
 
 #### Performance Tips
 
-1. Consider indexing Customer_ID, Product_ID, and Shipping_ID in the fact table.
+1. Consider indexing Customer_ID, Product_ID, and Shipping_ID in the fact table. 
 2. Partition the fact table by date or Order_ID for better performance.
 3. Create trigger functions to have an alert system on any data inconsistency or issues encountered.
 
