@@ -35,6 +35,17 @@ The key objectives of this project are:
 
 **Note: Kindly install Graphviz and refer to document for setup. Link : https://graphviz.org/download/**
 
+## Understanding flow of Work
+
+1. Extract, & Transformation of Data in Python
+2. Performing Exploratory Data Analysis in Python
+   a. Check Data Integrity, Correctness & Completeness
+   b. Checked Duplicate Data to remove redundancy
+   c. Check for Outliers - Box Plot Method and Skewness checked
+3. Data Modelling - Snowflake Schema
+4. Export Final Tables for Visualisation
+5. Dashboard Created for Tracking Metrics using Tableau
+
 ## Data Exploration and Cleaning
 
 **1. Initial Analysis:** We start by exploring the datasets to understand the data structure and content. This includes checking for missing values, duplicates, and any inconsistencies.
