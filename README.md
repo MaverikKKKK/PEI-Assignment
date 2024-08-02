@@ -117,6 +117,3 @@ The goal of this project is to implement a Snowflake schema for our sales data t
 2. Partition the fact table by date or Order_ID for better performance.
 3. Create trigger functions to have an alert system on any data inconsistency or issues encountered.
 4. Include order id in shipping table or vice versa to connect it directly with Orders Fact Table
-
-
-# Sales Dashboard : https://public.tableau.com/app/profile/raj.vishal/viz/PEIDataAnalystTask-SalesDashboard/SalesDashboard-1
