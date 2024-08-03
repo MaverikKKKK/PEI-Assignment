@@ -117,3 +117,11 @@ The goal of this project is to implement a Snowflake schema for our sales data t
 2. Partition the fact table by date or Order_ID for better performance.
 3. Create trigger functions to have an alert system on any data inconsistency or issues encountered.
 4. Include order id in shipping table or vice versa to connect it directly with Orders Fact Table
+
+
+# **Dashboard Link**
+
+https://app.powerbi.com/links/bWeIy_tWth?ctid=297c32c2-3a92-4af3-b823-2646e6e7f8ef&pbi_source=linkShare
+
+**Login ID :** vishal.raj@onexlabs.onmicrosoft.com
+**Password :** Lucifer@1100#
